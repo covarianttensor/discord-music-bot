@@ -1,0 +1,5 @@
+GUILD_ID_DEV = 891646260304568331 # Dev Server
+GUILD_ID_PRODUCTION = 661699688679866408 # Waifu Kingdom Server
+COMMAND_PREFIX = '!'
+ADMIN_ROLE_NAME = 'Bot Admin'
+YOUTUBE_COOKIE_FILE = 'app/cookies/youtube.com_cookies.txt'
