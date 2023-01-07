@@ -136,4 +136,4 @@ Then simply run the command:
 docker-compose up
 ```
 
-Your bot will start the build process if this is your first time runnig the bot, then it will log into Discord and be ready to accept commands.
+Your bot will start the build process, if this is your first time runnig the bot, then it will log into Discord and be ready to accept commands.
