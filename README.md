@@ -1,40 +1,64 @@
 # discord-music-bot
 A Discord bot that plays music.
 
+# Before Running...
+### Obtain your bot token from:
+```
+https://discord.com/developers/applications
+```
+### Select your created application and obtain or regenerate your bot token from the "Bot" section:
+![image](https://user-images.githubusercontent.com/507320/211165467-1eecb619-b8c3-4999-9dd3-4c09f1fe9b59.png)
 
-# **Installation Requirements (Native System)**
+### Create a *.env* file
+When creating an empty *.env* file make sure not forget to add the DOT in the filename.
 
-Bot requires Python 3.8.
+![image](https://user-images.githubusercontent.com/507320/211166034-b306ae5b-cea6-4097-84cc-29cc2032e8d0.png)
 
-Install Python dependecies:
+Place the *.env* file in the root of the bot folder.
 
 ```
-pip install -r requirements.txt
+discord-music-bot/
+      ├── ...
+      ├── docker-compose.yml
+      ├── Dockerfile
+      ├── requirements.txt
+      ├── .env <---- [PLACE FILE HERE]
+      └── app/
+            ├── ...
+            | 
+           ...
 ```
 
-Make sure to add an environment variable with your Discord token called:
+### Add all passwords and tokens in the empty *.env* file
+
+The bot supports running in *development mode* or *production mode*.
+
+*Development mode* if for testing the bot out with an alternate account token.
+
+*Production mode* is for running the bot normally with the main account token.
+
+Add two entries in the empty *.env* file called *DISCORD_TOKEN_DEV* and *DISCORD_TOKEN_PROD* like so:
 
 ```
-DISCORD_TOKEN
+DISCORD_TOKEN_DEV=alternate_discord_bot_token_goes_here
+DISCORD_TOKEN_PROD=discord_bot_token_goes_here
 ```
 
-Run bot with command:
+If you only care about running the bot normally, then leave the *DISCORD_TOKEN_DEV* entry blank, like so:
 
 ```
-python app/main.py
+DISCORD_TOKEN_DEV=
+DISCORD_TOKEN_PROD=discord_bot_token_goes_here
 ```
 
-
-
-# **Installation Requirements (Docker)**
-
-Add a *.env* file to the root directory that contains your Discord token.
+Next add another entry to the *.env* file called *RUN_MODE* and set it's value to *prod* if running in *production mode*, like so:
 
 ```
-DISCORD_TOKEN=your_discord_token_goes_here
+RUN_MODE=prod
 ```
 
-Then run in Docker (Docker Compose) by entering the command:
+If running bot in *development mode*, set *RUN_MODE* to "dev*, like so:
+
 ```
-docker-compose up
+RUN_MODE=dev
 ```
