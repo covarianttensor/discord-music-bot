@@ -57,8 +57,21 @@ Next add another entry to the *.env* file called *RUN_MODE* and set it's value t
 RUN_MODE=prod
 ```
 
-If running bot in *development mode*, set *RUN_MODE* to "dev*, like so:
+If running bot in *development mode*, set *RUN_MODE* to *dev*, like so:
 
 ```
 RUN_MODE=dev
+```
+
+Next add some default credentials for the Postgress database, like so:
+```
+POSTGRES_USER=place_username_here
+POSTGRES_PASSWORD=place_password_here
+POSTGRES_DB=place_database_name_here
+```
+
+Finally, add default credentials for the PGAdmin website, like so:
+```
+PGADMIN_DEFAULT_EMAIL=my_actual_email_address@email.com
+PGADMIN_DEFAULT_PASSWORD=place_password_here
 ```
