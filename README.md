@@ -126,7 +126,7 @@ discord-music-bot/
 
 After, you have done these things, you are ready to run the bot in a Docker container.
 
-# Run the bot
+# Run The Bot
 
 Once you have setup the bot like detailed in the section before, next open a terminal to the root directory of your bot (*i.e. discord-music-bot/*).
 
