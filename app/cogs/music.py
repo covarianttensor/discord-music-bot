@@ -4,8 +4,8 @@ from rich import print
 import nextcord
 from nextcord.ext import commands, tasks
 from helpers.youtube import get_audio_info, get_audio_search_results, get_query_type
-from lib.base_cog import BaseCog
-from lib.music_classes import MusicTrack
+from libs.base_cog import BaseCog
+from libs.music_classes import MusicTrack
 from typing import Union, Dict, List
 from configs.constants import ADMIN_ROLE_NAME
 

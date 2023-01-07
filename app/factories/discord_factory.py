@@ -1,4 +1,4 @@
-from lib.discord_bot import DiscordBot
+from libs.discord_bot import DiscordBot
 from cogs import music
 
 def create_instance(main_guild_id, command_prefix):
