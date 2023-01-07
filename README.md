@@ -2,6 +2,7 @@
 A Discord bot that plays music.
 
 # Before Running...
+## Get your credentials ready and setup your environment file
 ### Obtain your bot token from:
 ```
 https://discord.com/developers/applications
@@ -24,8 +25,7 @@ discord-music-bot/
       ├── requirements.txt
       ├── .env <---- [PLACE FILE HERE]
       └── app/
-            ├── ...
-            | 
+            ├── ... 
            ...
 ```
 
@@ -33,7 +33,7 @@ discord-music-bot/
 
 The bot supports running in *development mode* or *production mode*.
 
-*Development mode* if for testing the bot out with an alternate account token.
+*Development mode* is for testing the bot out with an alternate account token.
 
 *Production mode* is for running the bot normally with the main account token.
 
@@ -72,6 +72,21 @@ POSTGRES_DB=place_database_name_here
 
 Finally, add default credentials for the PGAdmin website, like so:
 ```
+PGADMIN_DEFAULT_EMAIL=my_actual_email_address@email.com
+PGADMIN_DEFAULT_PASSWORD=place_password_here
+```
+
+If you configured your *.env* file correctly, then it should look something like this:
+```
+RUN_MODE=prod
+
+DISCORD_TOKEN_DEV=alternate_discord_bot_token_goes_here
+DISCORD_TOKEN_PROD=discord_bot_token_goes_here
+
+POSTGRES_USER=place_username_here
+POSTGRES_PASSWORD=place_password_here
+POSTGRES_DB=place_database_name_here
+
 PGADMIN_DEFAULT_EMAIL=my_actual_email_address@email.com
 PGADMIN_DEFAULT_PASSWORD=place_password_here
 ```
